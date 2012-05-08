@@ -16,7 +16,6 @@
 %endif
 %if 0%{?rhel} == 6
 %define fedora 12
-%define dist .el6
 %endif
 
 # Define variables to use in conditionals
@@ -57,7 +56,7 @@ Requires: portreserve
 Summary: Spam filter for email which can be invoked from mail delivery agents
 Name: spamassassin
 Version: 3.3.1
-Release: 2%{?dist}
+Release: 2%{?dist}.goose.1
 License: ASL 2.0
 Group: Applications/Internet
 URL: http://spamassassin.apache.org/
@@ -272,6 +271,9 @@ fi
 exit 0
 
 %changelog
+* Tue May 8 2012 Clint Savage <herlo@gooseproject.org> - 3.3.1-2.goose.1
+- Fixing up dist properly
+
 * Tue Mar 16 2010 Warren Togami <wtogami@redhat.com> - 3.3.1-2
 - 3.3.1 take 2
 
